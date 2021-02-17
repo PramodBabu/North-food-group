@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import meat from '../assets/dummy.jpg';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -29,21 +28,26 @@ function SampleNextArrow(props) {
 
 const Responsive = () =>  {
 
-    const cardsInfo = [1,2,3,4,5,6,7,8];
-
-    const cardStyle = {
-        border: '2px solid black'
-    }
+    const cardsInfo = [
+      ['Beef','https://i.pinimg.com/originals/4a/b8/36/4ab836fad95a717bc5d356d8961fdbbc.jpg'],
+      ['Pork','https://www.icon0.com/static2/preview2/stock-photo-sausage-icon-94642.jpg'],
+      ['Poultry','https://i.pinimg.com/originals/66/10/b5/6610b5f3c0a3f9edf59de6f91241b0b6.png'],
+      ['Seafood','https://mammamiarochester.co.uk/images/prodotti/seafood.svg'],
+      ['Lamb','https://i.pinimg.com/originals/90/00/17/9000177dc02215d70ada3d1b9d0ea6fe.png'],
+      ['CannedFood','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8RMgHayXbgsQLFAOKzlhsHoSSJ1boLP6-Sg&usqp=CAU'],
+      ['Vegetable','https://png.pngtree.com/png-vector/20190701/ourmid/pngtree-vegetables-icon-for-your-project-png-image_1532868.jpg'],
+      ['Fruit','https://static.thenounproject.com/png/2684115-200.png']
+    ];
 
     var settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 6,
       slidesToScroll: 1,
       initialSlide: 0,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
+      // nextArrow: <SampleNextArrow />,
+      // prevArrow: <SamplePrevArrow />,
       responsive: [
         {
           breakpoint: 1024,
@@ -51,7 +55,7 @@ const Responsive = () =>  {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
@@ -73,14 +77,31 @@ const Responsive = () =>  {
     };
 
     return (
-      <div>
+      <div style={{justifyContent: 'center', textAlign: 'center'}}>
         <Slider {...settings}>
           {
             cardsInfo.map(item => (
                 <div>
-                    <div style={{ border: '2px solid black', margin: '10px' }} className="text-center">
-                        <h1>{item}</h1>
+                    <div 
+                      style={{ 
+                        backgroundColor: 'white', 
+                        // padding: '10px 20px', 
+                        borderRadius: '30px', 
+                        maxWidth: '150px',
+                        minHeight: '150px', 
+                        // margin: '10px', 
+                        justifyContent: 'center'
+                      }} 
+                        className="text-center">
+                        <img 
+                          src={item[1]} 
+                          class="img-responsive" 
+                          // width="70px" 
+                          // height="100%"
+                          // style={{objectFit: 'contain'}}
+                        />
                     </div>
+                    <p style={{fontSize: '20px'}}>{item[0]}</p>
                 </div>
             ))
         }

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Carousel } from 'antd';
+import React from "react";
 import { Card, Col, Row, Space } from 'antd';
 import Brand from './Brands';
 import Gallery from './Gallery';
+import CarouselBanner from './carousel';
 
 const HomeContent = () => {
 
@@ -49,8 +49,8 @@ const HomeContent = () => {
     ];
 
     const prods = [
-        ['https://www.blackwellsfarmproduce.co.uk/wp-content/uploads/2018/10/Blackwells-Beef-Rolled-Rib-Of-Beef.jpg', 'Beef Chuck Roll', 'Boneless'],
-        ['https://images.immediate.co.uk/production/volatile/sites/30/2020/08/the-health-benefits-of-salmon-700-350-5baa608.jpg?quality=90&resize=768,574', 'Salmon fish', 'Fish']
+        'https://lh5.googleusercontent.com/cEt6EqC2yAesjlhbZn5tnAyPD_mzNJjNBhLYPIUEUhRd27u8U8rMbqMhk50WyfI1cD_eCAS9tSnqD7yPw5ADq682Wu-X5DXQVjtSXKdR',
+        'https://lh5.googleusercontent.com/bdtYe77SQSu7jou6NtTSQVe9KXFU2wOA8qNohfT4QJYndOeWN13DJ_ZH5aZJOA5W2E4-Sfg8C1zIHDUAeuZygNFrM9e8v7t5A6bt7n15'
     ];
 
     const banner = [
@@ -60,83 +60,70 @@ const HomeContent = () => {
     ];
     
     return (
-        <div className="mt-10" style={{ padding: '0px'}}>
-            <Carousel>
-                <div>
-                    <h3 style={contentStyle}>1</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>2</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>3</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>4</h3>
-                </div>
-            </Carousel>
-            <div style={{backgroundColor: 'lightyellow', padding: '50px'}}>
+        <div className="mt-10" style={{ padding: '0px', marginBottom: '20px'}}>
+            <div>
+                <CarouselBanner />
+            </div>
+
+            <div style={{padding: '50px', backgroundColor: 'lightgrey'}}>
                     <Gallery />
             </div>
-            <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
+            <div className="row-fluid" style={{ padding: '20px', margin: '10px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
                 {banner.map(item => (
                     <img
                         alt="example"
                         src={item}
                         style={cardCover3}
-                        className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
+                        className="col-xs-12 col-sm-3 col-md-3 col-lg-3"
+                        style={{maxWidth: '400px'}}
                     />
                 ))}
             </div>
-            <div style={{ height: '200px', backgroundColor: 'lightgreen', marginTop: '10px'}}>
+            <div style={{ height: '200px', marginTop: '10px'}}>
                     <Brand />
             </div>
-            <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
+            <div style={{padding: '10px'}}>
                 <h2 className="text-center">Featured Products</h2>
                 <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
                     {featuredThumbnails.map(item => (
                         <img
                             alt="example"
                             src={item[0]}
-                            style={cardCover4}
-                            className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
+                            // style={cardCover4}
+                            className="col-xs-6 col-sm-3 col-md-3 col-lg-3 img-responsive"
                         />
                     ))}
                 </div>
             </div>
-            <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
-                <h2 className="text-center">Featured Products</h2>
-                <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
+            <div style={{ padding: '10px'}}>
+                <h2 className="text-center">Trending Products</h2>
+                <div className="row" style={{ padding: '20px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
                     {trendingThumbnails.map(item => (
-                        <img
-                            alt="example"
-                            src={item[0]}
-                            style={cardCover4}
-                            className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
-                        />
+                            <>
+                                <img
+                                    alt="example"
+                                    src={item[0]}
+                                    // style={cardCover4}
+                                    className="col-xs-6 col-sm-3 col-md-3 col-lg-3 img-rounded"
+                                />
+                                <h5>{item[1]}</h5>
+                                <p>{item[2]}</p>
+                            </>
                     ))}
                 </div>
             </div>
-            <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
-                <div className="site-card-wrapper">
-                    <Row gutter={10} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'center' }}>
-                        {
-                            prods.map(element => (
-                                <Col span={10}>
-                                    <Card
-                                        style={{ height: '250px', width: '500px'}}
-                                        cover={
-                                            <img
-                                                alt="example"
-                                                src={element[0]}
-                                                style={cardCover}
-                                            />} 
-                                        bordered={false}>
-                                    </Card>
-                                </Col>
-                            ))
-                        }
-                    </Row>
+            <div style={{padding: '10px'}}>
+                <div>
+                    <div className="row" style={{ padding: '20px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                        {prods.map(item => (
+                            <img
+                            style={{maxWidth: '500px'}}
+                                alt="example"
+                                src={item}
+                                className="col-xs-12 col-sm-6 col-md-6 col-lg-6 img-responsive"
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
