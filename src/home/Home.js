@@ -29,35 +29,41 @@ const Home = () => {
                 </div>
             </div>
             <Header style={{ backgroundColor: '#F8F8F8', marginBottom: '5px'}}>
-            <div style={{ display: 'flex', justifyContent: 'space-between'}}>
-            <img src={Logo} style={{height: '60px'}} alt="img" />
+            {/* <div style={{ display: 'flex', justifyContent: 'space-between'}}> */}
                 <Menu mode="horizontal" onClick={e => setCurrent(e.key)} selectedKeys={[current]} style={{ backgroundColor: '#F8F8F8'}}>
-                    <Menu.Item key="1" className="float-right">Home</Menu.Item>
-                    <SubMenu className="float-right" key="2" icon={<CaretDownFilled />} title="Products">
+                    <Menu.Item key="0">
+                    <img 
+                        src="https://lh4.googleusercontent.com/jktKdBvIeIvFJUFlJtNt-TDhErXze93JNJnVXtzIQgp3ijDBf22fSDNwhxxLXBtMDawPltn5VlNmfX8MI1pQomsZOlve5lk_o5jUvWE" 
+                        style={{height: '60px'}}
+                        alt="img" 
+                    />
+                    </Menu.Item>
+                    <Menu.Item key="1">Home</Menu.Item>
+                    <SubMenu key="2" icon={<CaretDownFilled />} title="Products">
                         <Menu.ItemGroup title="Item 1">
                             <Menu.Item key="setting:11">Option 1</Menu.Item>
                             <Menu.Item key="setting:12">Option 2</Menu.Item>
                         </Menu.ItemGroup>
                     </SubMenu>
-                    <SubMenu className="float-right" key="3" icon={<CaretDownFilled />} title="Marketing">
+                    <SubMenu key="3" icon={<CaretDownFilled />} title="Marketing">
                         <Menu.ItemGroup title="Item 2">
                             <Menu.Item key="setting:21">Option 1</Menu.Item>
                             <Menu.Item key="setting:22">Option 2</Menu.Item>
                         </Menu.ItemGroup>
                     </SubMenu>
-                    <SubMenu className="float-right" key="4" icon={<CaretDownFilled />} title="Sourcing">
+                    <SubMenu key="4" icon={<CaretDownFilled />} title="Sourcing">
                         <Menu.ItemGroup title="Item 3">
                             <Menu.Item key="setting:31">Option 1</Menu.Item>
                             <Menu.Item key="setting:32">Option 2</Menu.Item>
                         </Menu.ItemGroup>
                     </SubMenu>
-                    <Menu.Item className="float-right" key="5">Contact</Menu.Item>    
+                    <Menu.Item key="5">Contact</Menu.Item>    
                     <Avatar size='large' icon={<SearchOutlined />} />
-                    <Badge count={3}>
+                    {/* <Badge count={3}> */}
                         <Avatar size='large' style={{ marginLeft: '10px'}} icon={<ShoppingCartOutlined />} />
-                    </Badge>
+                    {/* </Badge> */}
                 </Menu>
-            </div>
+            {/* </div> */}
                 
             </Header>
             <Content>

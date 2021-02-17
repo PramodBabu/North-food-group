@@ -1,7 +1,8 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, Space } from 'antd';
 import Brand from './Brands';
+import Gallery from './Gallery';
 
 const HomeContent = () => {
 
@@ -14,8 +15,18 @@ const HomeContent = () => {
     };
 
     const cardCover = {
-        objectFit: 'cover',
+        objectFit: 'fill',
         height: '250px'
+    }
+
+    const cardCover3 = {
+        objectFit: 'contain',
+        paddingTop: '5px'
+    }
+
+    const cardCover4 = {
+        marginTop: '5px',
+        height: '200px'
     }
 
     const cardDiv1 = {
@@ -41,6 +52,12 @@ const HomeContent = () => {
         ['https://www.blackwellsfarmproduce.co.uk/wp-content/uploads/2018/10/Blackwells-Beef-Rolled-Rib-Of-Beef.jpg', 'Beef Chuck Roll', 'Boneless'],
         ['https://images.immediate.co.uk/production/volatile/sites/30/2020/08/the-health-benefits-of-salmon-700-350-5baa608.jpg?quality=90&resize=768,574', 'Salmon fish', 'Fish']
     ];
+
+    const banner = [
+        'https://lh3.googleusercontent.com/EQn0xt-9nK6UhMi51thjVjnTsJE_Lrnbs2GWeMGwbjb85s4UBb9FkY-gx9ZxUVZb5bFJhiYIH80x4yVPKqDMbVY1bXrf5-ev34A1G2Y7',
+        'https://lh6.googleusercontent.com/I5YMnwvkzk8jWT4Gg4U7TDKfHkyJ1VEUMI8j-527wbqYh3SBazJYGl_PuRrtdv0CPSR2BV1nQj030aRc_16vcwsgBREeGMeJlsntRyHY',
+        'https://lh6.googleusercontent.com/6B7FXfZVmes77BawPnXYgh3cHKiR6_Rv2JZyO-5jzzTtmnk6TJuFXN6dZKq74b2xgMt0gVhBH-ZOTgPY03Kz99pAyh-jej3sZAXauSfQ'
+    ];
     
     return (
         <div className="mt-10" style={{ padding: '0px'}}>
@@ -58,102 +75,49 @@ const HomeContent = () => {
                     <h3 style={contentStyle}>4</h3>
                 </div>
             </Carousel>
-            <div style={{ height: '200px', backgroundColor: 'lightyellow'}}>
-                    image slider
+            <div style={{backgroundColor: 'lightyellow', padding: '50px'}}>
+                    <Gallery />
             </div>
-            <div style={{ height: '300px', backgroundColor: 'lightblue', padding: '10px'}}>
-                <div className="site-card-wrapper" style={cardDiv1}>
-                    <Row gutter={16} style={{ paddingTop: '20px' }}>
-                        <Col span={8}>
-                            <Card
-                                style={{ height: '250px'}}
-                                cover={
-                                    <img
-                                        alt="example"
-                                        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                                        style={cardCover}
-                                    />} 
-                                bordered={false}>
-                            </Card>
-                        </Col>
-                        <Col span={8}>
-                            <Card
-                                bordered={false}
-                                style={{ height: '250px'}}
-                                cover={
-                                    <img
-                                        alt="example"
-                                        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                                        style={cardCover}
-                                    />}>
-                            </Card>
-                        </Col>
-                        <Col span={8}>
-                            <Card
-                                bordered={false}
-                                style={{ height: '250px'}}
-                                cover={
-                                    <img
-                                        alt="example"
-                                        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                                        style={cardCover}
-                                    />}>
-                            </Card>
-                        </Col>
-                    </Row>
-                </div>
+            <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
+                {banner.map(item => (
+                    <img
+                        alt="example"
+                        src={item}
+                        style={cardCover3}
+                        className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
+                    />
+                ))}
             </div>
             <div style={{ height: '200px', backgroundColor: 'lightgreen', marginTop: '10px'}}>
                     <Brand />
             </div>
             <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
                 <h2 className="text-center">Featured Products</h2>
-                <div className="site-card-wrapper" style={cardDiv1}>
-                    <Row gutter={16} style={{ paddingTop: '20px' }}>
-                        {
-                            featuredThumbnails.map(element => (
-                                <Col span={6}>
-                                    <Card
-                                        style={{ maxHeight: '250px'}}
-                                        cover={
-                                            <img
-                                                alt="example"
-                                                src={element[0]}
-                                                style={cardCover}
-                                            />} 
-                                        bordered={false}>
-                                    </Card>
-                                </Col>
-                            ))
-                        }
-                    </Row>
+                <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
+                    {featuredThumbnails.map(item => (
+                        <img
+                            alt="example"
+                            src={item[0]}
+                            style={cardCover4}
+                            className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
+                        />
+                    ))}
                 </div>
             </div>
             <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
-                <h2 className="text-center">Trending Products</h2>
-                <div className="site-card-wrapper" style={cardDiv1}>
-                    <Row gutter={[16, 24]} style={{ paddingTop: '20px' }}>
-                        {
-                            trendingThumbnails.map(element => (
-                                <Col span={6} >
-                                    <Card
-                                        style={{ height: '250px'}}
-                                        cover={
-                                            <img
-                                                alt="example"
-                                                src={element[0]}
-                                                style={cardCover}
-                                                className="img-responsive"
-                                            />} 
-                                        bordered={false}>
-                                    </Card>
-                                </Col>
-                            ))
-                        }
-                    </Row>
+                <h2 className="text-center">Featured Products</h2>
+                <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
+                    {trendingThumbnails.map(item => (
+                        <img
+                            alt="example"
+                            src={item[0]}
+                            style={cardCover4}
+                            className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
+                        />
+                    ))}
                 </div>
             </div>
-            {/* <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
+            <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
                 <div className="site-card-wrapper">
                     <Row gutter={10} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'center' }}>
                         {
@@ -174,7 +138,7 @@ const HomeContent = () => {
                         }
                     </Row>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 }
