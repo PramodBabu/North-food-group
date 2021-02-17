@@ -38,30 +38,32 @@ const Home = () => {
                         alt="img" 
                     />
                     </Menu.Item>
-                    <Menu.Item key="1">Home</Menu.Item>
-                    <SubMenu key="2" icon={<CaretDownFilled />} title="Products">
-                        <Menu.ItemGroup title="Item 1">
-                            <Menu.Item key="setting:11">Option 1</Menu.Item>
-                            <Menu.Item key="setting:12">Option 2</Menu.Item>
-                        </Menu.ItemGroup>
-                    </SubMenu>
-                    <SubMenu key="3" icon={<CaretDownFilled />} title="Marketing">
-                        <Menu.ItemGroup title="Item 2">
-                            <Menu.Item key="setting:21">Option 1</Menu.Item>
-                            <Menu.Item key="setting:22">Option 2</Menu.Item>
-                        </Menu.ItemGroup>
-                    </SubMenu>
-                    <SubMenu key="4" icon={<CaretDownFilled />} title="Sourcing">
+                    <Menu.Item style={{ float: 'right'}}>
+                    <Avatar size='medium' icon={<SearchOutlined />} />
+                    {/* <Badge count={3}> */}
+                        <Avatar size='medium' style={{ marginLeft: '10px'}} icon={<ShoppingCartOutlined />} />
+                    {/* </Badge> */}
+                    </Menu.Item>
+                    <Menu.Item key="5" style={{ float: 'right'}}>Contact</Menu.Item>    
+                    <SubMenu key="4" style={{ float: 'right'}} icon={<CaretDownFilled />} title="Sourcing">
                         <Menu.ItemGroup title="Item 3">
                             <Menu.Item key="setting:31">Option 1</Menu.Item>
                             <Menu.Item key="setting:32">Option 2</Menu.Item>
                         </Menu.ItemGroup>
                     </SubMenu>
-                    <Menu.Item key="5">Contact</Menu.Item>    
-                    <Avatar size='large' icon={<SearchOutlined />} />
-                    {/* <Badge count={3}> */}
-                        <Avatar size='large' style={{ marginLeft: '10px'}} icon={<ShoppingCartOutlined />} />
-                    {/* </Badge> */}
+                    <SubMenu key="3" style={{ float: 'right'}} icon={<CaretDownFilled />} title="Marketing">
+                        <Menu.ItemGroup title="Item 2">
+                            <Menu.Item key="setting:21">Option 1</Menu.Item>
+                            <Menu.Item key="setting:22">Option 2</Menu.Item>
+                        </Menu.ItemGroup>
+                    </SubMenu>
+                    <SubMenu key="2" style={{ float: 'right'}} icon={<CaretDownFilled />} title="Products">
+                        <Menu.ItemGroup title="Item 1">
+                            <Menu.Item key="setting:11">Option 1</Menu.Item>
+                            <Menu.Item key="setting:12">Option 2</Menu.Item>
+                        </Menu.ItemGroup>
+                    </SubMenu>
+                    <Menu.Item key="1" style={{ float: 'right'}} >Home</Menu.Item>
                 </Menu>
             {/* </div> */}
                 

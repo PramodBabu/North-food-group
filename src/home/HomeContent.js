@@ -26,7 +26,9 @@ const HomeContent = () => {
 
     const cardCover4 = {
         marginTop: '5px',
-        height: '200px'
+        height: '200px',
+        width: '100%',
+        borderRadius: '20px'
     }
 
     const cardDiv1 = {
@@ -95,31 +97,42 @@ const HomeContent = () => {
                 <h2 className="text-center">Featured Products</h2>
                 <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
                     {featuredThumbnails.map(item => (
-                        <img
+                        <div className="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <img
                             alt="example"
                             src={item[0]}
                             style={cardCover4}
-                            className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
                         />
+                        <span className="h3">{item[1]}</span>  
+                        <p>{item[2]}</p>
+                        </div>
                     ))}
                 </div>
+                {/* <div>
+                    <div class="col-sm">col-sm</div>
+                    <div class="col-sm">col-sm</div>
+                    <div class="col-sm">col-sm</div>
+                </div> */}
             </div>
             <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
-                <h2 className="text-center">Featured Products</h2>
+                <h2 className="text-center">Trending Products</h2>
                 <div className="row" style={{ padding: '20px', display: 'flex',justifyContent: 'center',flexWrap: 'wrap' }}>
                     {trendingThumbnails.map(item => (
-                        <img
+                        <div className="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                            <img
                             alt="example"
                             src={item[0]}
                             style={cardCover4}
-                            className="col-xs-6 col-sm-3 col-md-3 col-lg-3"
                         />
+                        <span className="h3">{item[1]}</span>  
+                        <p>{item[2]}</p>
+                        </div>
                     ))}
                 </div>
             </div>
             <div style={{ backgroundColor: 'lightblue', padding: '10px'}}>
                 <div className="site-card-wrapper">
-                    <Row gutter={10} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'center' }}>
+                    {/* <Row gutter={10} style={{ paddingTop: '20px', display: 'flex', justifyContent: 'center' }}>
                         {
                             prods.map(element => (
                                 <Col span={10}>
@@ -136,7 +149,7 @@ const HomeContent = () => {
                                 </Col>
                             ))
                         }
-                    </Row>
+                    </Row> */}
                 </div>
             </div>
         </div>
