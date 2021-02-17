@@ -1,0 +1,38 @@
+.featuredDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.featured {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.featured div {
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.text-responsive-p {
+    font-size: 2.1vmin;
+    color: lightgray;
+    text-align: start;
+}
+
+.text-responsive-h3 {
+    font-size: calc(30% + 1vw + 1vh);
+    text-align: start;
+    padding-bottom: 0;
+}
+
+.imgcss {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+.imgdiv {
+    /* height: auto; */
+    overflow: hidden;
+}

@@ -3,6 +3,7 @@ import { Layout, Menu, Breadcrumb, Button, Avatar, Badge, Carousel  } from 'antd
 import { ArrowDownOutlined, CaretDownFilled, SearchOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 
 import HomeContent from './HomeContent';
+import Footers from './Footers';
 
 import Logo from '../assets/logo.jpg';
 
@@ -71,7 +72,7 @@ const Home = () => {
             <Content>
                 <HomeContent />
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footers />
         </Layout>
     );
 }
