@@ -8,7 +8,7 @@ const footer = () => {
             <div class="row-fluid" className="footerTop">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div style={{display: 'flex', flexDirection: 'column'}}>
-                        <h4 style={{color:'white'}}>Nesletter Signup</h4>
+                        <span style={{color:'white'}}>Nesletter Signup</span>
                         <div class="input-group" style={{display: 'flex', justifyContent: 'center'}}>
                             <input 
                                 type="search" 
@@ -28,21 +28,21 @@ const footer = () => {
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div style={{display: 'flex', flexDirection: 'column'}}>
-                        <h4 style={{color:'white'}}>Get in touch with us</h4>
+                        <span style={{color:'white'}}>Get in touch with us</span>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
-                            <a class="waves-effect waves-light" style={{padding:'0px 5px'}}>
+                            <a class="waves-effect waves-light" style={{padding: '0 20px'}}>
                                 <i class="fa fa-twitter"></i>
                             </a>
-                            <a class="waves-effect waves-light" style={{padding:'0px 5px'}}>
+                            <a class="waves-effect waves-light" style={{padding: '0 20px'}}>
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a class="waves-effect waves-light" style={{padding:'0px 5px'}}>
+                            <a class="waves-effect waves-light" style={{padding: '0 20px'}}>
                                 <i class="fa fa-google"></i>
                             </a>
-                            <a class="waves-effect waves-light" style={{padding:'0px 5px'}}>
+                            <a class="waves-effect waves-light" style={{padding: '0 20px'}}>
                                 <i class="fa fa-linkedin"></i>
                             </a>
-                            <a class="waves-effect waves-light" style={{padding:'0px 5px'}}>
+                            <a class="waves-effect waves-light" style={{padding: '0 20px'}}>
                                 <i class="fa fa-skype"></i>
                             </a>
                         </div>
@@ -50,7 +50,7 @@ const footer = () => {
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div style={{display: 'flex', flexDirection: 'column'}}>
-                        <h4 style={{color:'white'}}>Download App</h4>
+                        <span style={{color:'white'}}>Download App</span>
                             <div style={{display: 'flex', justifyContent: 'center'}}>
                                 <i>
                                     <img src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' 
@@ -68,16 +68,16 @@ const footer = () => {
             </div>
 
             <div class="row-fluid" className="footerMid">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
-                    <h4 style={{color:'white'}}>About NFG</h4>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column'}}>
+                    <span style={{color:'white'}}>About NFG</span>
                     <p>Mission, Vision and Goal</p>
                     <p>Why NFG?</p>
                     <p>Affiliated companies</p>
                     <p>International Operation</p>
                     <p>Facility Tour</p>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
-                    <h4 style={{color:'white'}}>Marketing</h4>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column'}}>
+                    <span style={{color:'white'}}>Marketing</span>
                     <p>Corporate Image</p>
                     <p>Position</p>
                     <p>Value Chain</p>
@@ -85,20 +85,20 @@ const footer = () => {
                     <p>Promotion</p>
                     <p>Market Information</p>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
-                    <h4 style={{color:'white'}}>Sourcing</h4>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column'}}>
+                    <span style={{color:'white'}}>Sourcing</span>
                     <p>Supplier Resources</p>
                     <p>Supplier standards</p>
                     <p>Supplier Diversity</p>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
-                    <h4 style={{color:'white'}}>Policy</h4>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column'}}>
+                    <span style={{color:'white'}}>Policy</span>
                     <p>Private Policy</p>
                     <p>Shipping policy</p>
                     <p>Service policy</p>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
-                    <h4 style={{color:'white'}}>Contact Us</h4>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2" style={{display: 'flex', flexDirection: 'column'}}>
+                    <span style={{color:'white'}}>Contact Us</span>
                     <p>1245 West Royal Lane, Dallas, TX 75261</p>
                     <p>(972) 445-3322</p>
                     <p>(972) 438-1548</p>
